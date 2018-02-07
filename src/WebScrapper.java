@@ -25,8 +25,9 @@ public class WebScrapper {
         System.out.println(totalnum);
 
         String hamlet = urlToString("http://erdani.com/tdpl/hamlet.txt");
-        hamlet.replaceAll("Prince","1");
-        hamlet.replaceAll("[^1]","");
+        hamlet = hamlet.replaceAll("Prince","*");
+        hamlet = hamlet.replaceAll("prince","*");
+        hamlet = hamlet.replaceAll("[^*]","");
         System.out.println(hamlet.length());
     }
 }
