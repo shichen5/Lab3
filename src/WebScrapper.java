@@ -20,6 +20,13 @@ public class WebScrapper {
         return contents;
     }
     public static void main(String[] unused) {
-        System.out.println(urlToString("http://erdani.com/tdpl/hamlet.txt"));
+        String[] total = urlToString("http://erdani.com/tdpl/hamlet.txt").split(" ");
+        int totalnum = total.length;
+        System.out.println(totalnum);
+
+        String hamlet = urlToString("http://erdani.com/tdpl/hamlet.txt");
+        hamlet.replaceAll("Prince","1");
+        hamlet.replaceAll("[^1]","");
+        System.out.println(hamlet.length());
     }
 }
